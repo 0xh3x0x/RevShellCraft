@@ -3,7 +3,7 @@
 ---
 
 <p align="center">
-  <img src="https://i.ibb.co/4wc361g3/revshellcraft.png" alt="tool banner"/>
+  <img src="https://i.ibb.co/s9TDZj5C/shell-removebg.png" alt="tool banner"/>
 </p>
 
 ## RevShellCraft
