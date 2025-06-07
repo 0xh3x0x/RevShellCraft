@@ -2,7 +2,7 @@
 *A tool to generate reverse shells on-the-fly for ethical hackers and penetration testers.*
 ---
 
-# ![Logo](https://i.ibb.co/YTfj4Tm4/shell.png)
+# ![Logo](https://i.ibb.co/s9TDZj5C/shell-removebg.png)
 
 ## RevShellCraft
 
@@ -39,11 +39,16 @@ Clone the repository:
 ```bash
 git clone https://github.com/0xh3x0x/revshellcraft
 ```
-then run install.sh file to install tool into your system
+make install.sh executable, change permissions using following command
 ```bash
-  bash  install.sh
+  chmod +x install.sh
 ```
-run tool by RevShellCraft
+now runn install.sh as root
+```bash
+  sudo ./install.sh
+```
+Now the revshellcraft has been successfully installed on your machine
+run tool by revshellcraft
 
 ## 📸 Screenshots
 ![App Screenshot](https://i.ibb.co/kggPt8FG/image.png)
