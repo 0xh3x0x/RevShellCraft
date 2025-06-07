@@ -2,7 +2,9 @@
 *A tool to generate reverse shells on-the-fly for ethical hackers and penetration testers.*
 ---
 
-# ![Logo](https://i.ibb.co/s9TDZj5C/shell-removebg.png)
+<p align="center">
+  <img src="https://i.ibb.co/4wc361g3/revshellcraft.png" alt="tool banner"/>
+</p>
 
 ## RevShellCraft
 
